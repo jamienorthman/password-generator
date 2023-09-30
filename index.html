@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Password Generator</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="title1">Generate a</h1>
-            <h1 class="title2">random password</h1>
-            <p class="subtitle">Never use an insecure password again.</p>
-            <button id="generate-button">Generate passwords</button>
-            <div class="separator-container">
-                <div class="separator"></div>
-            </div>
-            <div class="passwords">
-                <div id="password1"></div>
-                <div id="password2"></div>
-            </div>
-        </div>
-        <script src="app.js" async defer></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Password Generator</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title1">Generate a</h1>
+      <h1 class="title2">random password</h1>
+      <p class="subtitle">Never use an insecure password again.</p>
+      <div class="length-container">
+        <label for="slider">Password Length</label
+        ><input
+          type="range"
+          id="slider"
+          name="slider"
+          min="8"
+          max="15"
+          list="markers"
+        />
+        <datalist id="markers">
+          <option value="8"></option>
+          <option value="9"></option>
+          <option value="10"></option>
+          <option value="11"></option>
+          <option value="12"></option>
+          <option value="13"></option>
+          <option value="14"></option>
+          <option value="15"></option>
+        </datalist>
+      </div>
+      <button id="generate-button">Generate passwords</button>
+      <div class="separator-container">
+        <div class="separator"></div>
+      </div>
+      <div class="passwords">
+        <div id="password1"></div>
+        <div id="password2"></div>
+      </div>
+    </div>
+    <script src="app.js" type="module" async defer></script>
+  </body>
 </html>
