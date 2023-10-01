@@ -23,6 +23,7 @@
           min="8"
           max="15"
           list="markers"
+          oninput="this.nextElementSibling.value = this.value"
         />
         <datalist id="markers">
           <option value="8"></option>
@@ -35,6 +36,7 @@
           <option value="15"></option>
         </datalist>
       </div>
+      <p class="length-display">Characters: <output id="value"></output></p>
       <button id="generate-button">Generate passwords</button>
       <div class="separator-container">
         <div class="separator"></div>

@@ -1,7 +1,13 @@
 import { characters } from "/data.js";
-const slider = document.getElementById("slider");
-// How long the password can be:
-const passwordLength = slider.value;
+//Get input range value and display character length:
+const passwordLength = document.getElementById("slider");
+const value = document.getElementById("value")
+value.textContent = passwordLength.value
+passwordLength.addEventListener("input", (e) => {
+  value.textContent = e.target.value
+})
+
+
 // Getting the HTML elements (divs) where the passwords will
 // appear.
 const password1El = document.getElementById("password1");
@@ -20,7 +26,7 @@ const getRandomCharacter = () => {
 // random password:
 const generateRandomPassword = () => {
   let randomPassword = "";
-  for (let i = 0; i < passwordLength; i++) {
+  for (let i = 0; i < passwordLength.value; i++) {
     randomPassword += getRandomCharacter();
   }
   return randomPassword;
@@ -32,3 +38,5 @@ function displayPasswords() {
   password1El.textContent = generatedPasswordOne;
   password2El.textContent = generatedPasswordTwo;
 }
+
+

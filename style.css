@@ -107,7 +107,11 @@ input[type="range"]::-moz-range-thumb {
   width: 1rem;
 }
 
-datalist option {
+.markers {
+  color: #d5d4d8;
+}
+
+.length-display {
   color: #d5d4d8;
 }
 
