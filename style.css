@@ -172,6 +172,11 @@ i {
   cursor: pointer;
 }
 
+.copy-text {
+  font-size: 13px;
+  text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     max-width: 375px;

@@ -30,7 +30,7 @@ const button = document.getElementById("generate-button");
 button.addEventListener("click", displayPasswords);
 
 // Generates a random character from the array:
-const getRandomCharacter = () => {
+const getRandomCharacter = () => { 
   let randomChar = Math.floor(Math.random() * characters.length);
   return characters[randomChar];
 };
@@ -40,10 +40,10 @@ const getRandomCharacter = () => {
 // random password:
 const generateRandomPassword = () => {
   let randomPassword = "";
-  for (let i = 0; i < passwordLength.value; i++) { 
-    randomPassword += getRandomCharacter();
-  }
-  return randomPassword;
+    for (let i = 0; i < passwordLength.value; i++) { 
+        randomPassword += getRandomCharacter();
+    }
+    return randomPassword;
 };
 
 // A function to display the passwords in their divs:
