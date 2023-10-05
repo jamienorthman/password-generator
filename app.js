@@ -9,12 +9,13 @@ passwordLength.addEventListener("input", (e) => {
 })
 
 //Add a copy on click event:
-const clipboard = document.getElementById("clipboard")
-clipboard.addEventListener("click", () => {
-  navigator.clipboard.writeText(password1El.innerText)
-  navigator.clipboard.writeText(password2El.innerText)
-  alert("Password copied!")
-})
+/*const clipboard = document.getElementById("clipboard")*/
+document.addEventListener('click', function(event) {
+  if (event.target.tagName === 'SPAN') {
+    let copyText = event.target.textContent;
+    navigator.clipboard.writeText(copyText);
+  }
+});
 
 // Getting the HTML elements (divs) where the passwords will
 // appear.
