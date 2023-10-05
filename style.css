@@ -34,10 +34,17 @@ body {
   color: #10b981;
   margin-top: 0px;
   margin-bottom: 0px;
+  text-shadow: 0 0px 10px rgba(255, 255, 255, .8);
+}
+
+p, label,
+.markers,
+.length-display,
+i {
+  color: #d5d4d8;
 }
 
 .subtitle {
-  color: #d5d4d8;
   margin-top: 7px;
 }
 
@@ -45,10 +52,6 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-label {
-  color: #d5d4d8;
 }
 /* Range Reset */
 input[type="range"] {
@@ -107,27 +110,20 @@ input[type="range"]::-moz-range-thumb {
   width: 1rem;
 }
 
-.markers {
-  color: #d5d4d8;
-}
-
-.length-display {
-  color: #d5d4d8;
-}
-
 #generate-button {
   background-color: #10b981;
   border: none;
   width: 150px;
-  color: #d5d4d8;
+  color: white;
   border-radius: 5px;
   padding: 10px;
   margin-top: 30px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 #generate-button:hover {
-  border: 1px solid #d5d4d8;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, .8);
 }
 
 .separator-container {
@@ -143,7 +139,7 @@ input[type="range"]::-moz-range-thumb {
   border-top: 1px solid #2f3e53;
 }
 
-.passwords {
+.password-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,15 +150,25 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 20px;
 }
 
-#password1,
-#password2 {
+.password {
   width: 200px;
   height: 35px;
   background-color: #2f3e53;
   border-radius: 5px;
-  color: #10b981;
   padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#password1,
+#password2 {
+  color: #10b981;
   text-align: center;
+}
+
+i {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -182,7 +188,7 @@ input[type="range"]::-moz-range-thumb {
     max-width: 300px;
   }
 
-  .passwords {
+  .password-container {
     display: flex;
     flex-direction: column;
     align-items: center;

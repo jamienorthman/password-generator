@@ -7,12 +7,13 @@
     <title>Password Generator</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="title1">Generate a</h1>
-      <h1 class="title2">random password</h1>
+      <h1 class="title1">Generate <i class="fa-solid fa-lock"></i></h1>
+      <h1 class="title2">random passwords</h1>
       <p class="subtitle">Never use an insecure password again.</p>
       <div class="length-container">
         <label for="slider">Password Length</label
@@ -37,13 +38,18 @@
         </datalist>
       </div>
       <p class="length-display">Characters: <output id="value"></output></p>
+      <!-- <label for="checkbox">!nclude_$pecial * char@cter$?
+        <input type="checkbox" checked="checked" id="checkbox">
+        <span class="checkmark"></span>
+      </label> -->
+      <br>
       <button id="generate-button">Generate passwords</button>
       <div class="separator-container">
         <div class="separator"></div>
       </div>
-      <div class="passwords">
-        <div id="password1"></div>
-        <div id="password2"></div>
+      <div class="password-container">
+        <div class="password"><span id="password1"></span><i class="fa-regular fa-clipboard" id="clipboard"></i></div>
+        <div class="password"><span id="password2"></span><i class="fa-regular fa-clipboard" id="clipboard"></i></div>
       </div>
     </div>
     <script src="app.js" type="module" async defer></script>
