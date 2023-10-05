@@ -21,7 +21,7 @@ clipboard.addEventListener("click", () => {
 const password1El = document.getElementById("password1");
 const password2El = document.getElementById("password2");
 
-const checked = document.getElementById("checkbox").checked
+//const checked = document.getElementById("checkbox").checked
 
 // Getting the button element and adding a click event listener,
 // which passes the final function displayPasswords:
