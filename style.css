@@ -110,6 +110,12 @@ input[type="range"]::-moz-range-thumb {
   width: 1rem;
 }
 
+.checkbox {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 #generate-button {
   background-color: #10b981;
   border: none;

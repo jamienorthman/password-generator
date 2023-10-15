@@ -38,11 +38,25 @@
         </datalist>
       </div>
       <p class="length-display">Characters: <output id="value"></output></p>
-      <!-- <label for="checkbox">!nclude_$pecial * char@cter$?
-        <input type="checkbox" checked="checked" id="checkbox">
-        <span class="checkmark"></span>
-      </label> -->
       <br>
+
+      <label class="checkbox" for="symbol">!nclude_$pecial * char@cter$?
+        <input type="checkbox" checked="checked" id="symbol">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox" for="uppercase">INCLUDE UPPERCASE?
+        <input type="checkbox" checked="checked" id="uppercase">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox" for="lowercase">include lowercase?
+        <input type="checkbox" checked="checked" id="lowercase">
+        <span class="checkmark"></span>
+      </label>
+      <label class="checkbox" for="number">Inc1ud3 number5?
+        <input type="checkbox" checked="checked" id="number">
+        <span class="checkmark"></span>
+      </label>
+
       <button id="generate-button">Generate passwords</button>
       <div class="separator-container">
         <div class="separator"></div>
@@ -53,6 +67,6 @@
       </div>
       <p class="copy-text">* Click password to copy</p>
     </div>
-    <script src="app.js" type="module" async defer></script>
+    <script src="app.js" async defer type="module"></script>
   </body>
 </html>
